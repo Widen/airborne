@@ -9,6 +9,9 @@
 /test/version_tmp/
 /tmp/
 
+## Sublime Project
+*.sublime*
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history
