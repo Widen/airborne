@@ -138,6 +138,12 @@ For requests that require a body (`post`, `put`, `patch`) you can pass the body 
 post 'http://example.com/api/v1/my_api', { :name => 'John Doe' }, { 'x-auth-token' => 'my_token' }
 ```
 
+For multipart requests, specify :multipart => true in request body
+
+```ruby
+post 'http://example.com/api/v1/my_api', {:file => my_file, :multipart => true}
+```
+
 For requests that require Query params you can pass a params hash into headers.
 
 ```ruby

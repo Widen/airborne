@@ -8,7 +8,7 @@ module Airborne
         begin
           request_body = options[:body].nil? ? '' : options[:body]
           request_body = request_body.to_json if options[:body].is_a?(Hash) &&
-            options[:body].to_json['file'].nil?
+            options[:body][:multipart] != true
           RestClient.send(method, get_url(url), request_body, headers)
         rescue RestClient::Exception => e
           e.response
